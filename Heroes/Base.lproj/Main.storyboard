@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="TradeGothic-Bold.ttf">
+            <string>TradeGothicW01-Bold</string>
+            <string>TradeGothicW01-Bold</string>
+        </mutableArray>
+        <mutableArray key="TradeGothic-Roman.ttf">
+            <string>TradeGothicW01-Roman</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Heroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg_captainamerica.png" translatesAutoresizingMaskIntoConstraints="NO" id="wxh-gK-4fF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49D-Ih-7kO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="img_marvel_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="4tE-cF-rDh">
+                                        <rect key="frame" x="149" y="27" width="76" height="30"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnX-wj-wCt">
+                                        <rect key="frame" x="342" y="29" width="25" height="25"/>
+                                        <state key="normal" image="ic_profile.png"/>
+                                        <connections>
+                                            <segue destination="g2o-Cz-dG6" kind="showDetail" identifier="showProfile" id="NWN-wb-AXJ">
+                                                <segue key="commit" inheritsFrom="parent" id="mmt-1K-o8g"/>
+                                                <segue key="preview" inheritsFrom="commit" id="jd5-w2-Xrl"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.13725490200000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4BG-SL-YRN">
+                                <rect key="frame" x="17" y="71" width="340" height="588"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="5" id="1DG-1f-yXt">
+                                    <size key="itemSize" width="100" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="uXG-76-kkS" customClass="CollectionViewCell" customModule="Heroes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIZ-Uw-WHI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="142"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3i-Fg-0vv">
+                                                    <rect key="frame" x="8" y="147" width="42" height="15"/>
+                                                    <fontDescription key="fontDescription" name="TradeGothicW01-Bold" family="TradeGothicW01-Bold" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="hqImage" destination="wIZ-Uw-WHI" id="Wkh-x3-KAL"/>
+                                            <outlet property="hqNumber" destination="d3i-Fg-0vv" id="SAE-zW-dNQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="iux-QY-8ug"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ZcV-VH-Xr9"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4BG-SL-YRN" id="4Xy-fs-dGA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.5" y="386.5"/>
+        </scene>
+        <!--ProfileViewController-->
+        <scene sceneID="Ur4-5k-5m1">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" title="ProfileViewController" id="g2o-Cz-dG6" customClass="ProfileViewController" customModule="Heroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nDU-85-Q6f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rjz-1q-ZmQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oTo-56-1Bs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="bg_captainamerica.png" translatesAutoresizingMaskIntoConstraints="NO" id="caF-nq-gHY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-PH-jMN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dml-Ty-M7M">
+                                        <rect key="frame" x="21" y="31" width="20" height="22"/>
+                                        <state key="normal" image="ic_back.png"/>
+                                        <connections>
+                                            <action selector="backToMain:" destination="g2o-Cz-dG6" eventType="touchUpInside" id="DvM-dg-VtR"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Samuel Catalano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adq-Kd-qtV">
+                                        <rect key="frame" x="49" y="31" width="304" height="21"/>
+                                        <fontDescription key="fontDescription" name="TradeGothicW01-Bold" family="TradeGothicW01-Bold" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90980392160000001" green="0.13725490200000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="samuel.png" translatesAutoresizingMaskIntoConstraints="NO" id="gHI-WG-Eac">
+                                <rect key="frame" x="127" y="85" width="120" height="120"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="2YA-bU-jce">
+                                <rect key="frame" x="20" y="223" width="335" height="318"/>
+                                <string key="text">Meu nome é Samuel, sou do Brasil mas, eu também sou um cidadão europeu e sou apaixonado por tecnologia e inovação. Amo descobrir e usar tudo o que é novo e eu sempre estou disponível para ajudar a todos que precisam de ajuda. profissional atuando desde 2003 na área de TI com experiência em administração de sistemas, desenvolvimento de software voltado para o mercado de internet e pré-mídia, desenvolvimento de software voltado para os aplicativos e jogos, análise de requisitos e testes integrados. habilidades de liderança e capacidade de enfrentar novos desafios</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="TradeGothicW01-Roman" family="TradeGothicW01-Roman" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6bS-yX-eeW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8SA-gg-Eya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.5" y="386.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_captainamerica.png" width="375" height="667"/>
+        <image name="ic_back.png" width="20" height="20"/>
+        <image name="ic_profile.png" width="25" height="25"/>
+        <image name="img_marvel_logo.png" width="76" height="30"/>
+        <image name="samuel.png" width="120" height="120"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mmt-1K-o8g"/>
+    </inferredMetricsTieBreakers>
+</document>

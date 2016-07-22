@@ -1,0 +1,12 @@
+PODS:
+  - AASquaresLoading (0.3.2)
+
+DEPENDENCIES:
+  - AASquaresLoading (~> 0.3)
+
+SPEC CHECKSUMS:
+  AASquaresLoading: 14da64695b9128cbda6b8558249bd0bbc72123b6
+
+PODFILE CHECKSUM: 37b9aa4fdf432cf9e9ea4002b357fe2807eae026
+
+COCOAPODS: 1.0.1
